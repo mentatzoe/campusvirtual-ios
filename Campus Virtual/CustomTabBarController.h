@@ -10,4 +10,6 @@
 
 @interface CustomTabBarController : UITabBarController
 
+- (IBAction)unwindToTabs:(UIStoryboardSegue *) unwindSegue;
+
 @end

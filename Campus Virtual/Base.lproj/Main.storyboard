@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="1161" y="831"/>
         </scene>
-        <!--View Controller - Login-->
+        <!--Login View Controller - Login-->
         <scene sceneID="Rbx-V1-s9l">
             <objects>
-                <viewController title="Login" id="4Ku-qT-dBB" sceneMemberID="viewController">
+                <viewController title="Login" id="4Ku-qT-dBB" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DMY-rp-vLK"/>
                         <viewControllerLayoutGuide type="bottom" id="kWg-TP-xAX"/>
@@ -126,23 +126,42 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nX-do-5c5">
                                 <rect key="frame" x="137" y="352" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8YX-ce-x5E" kind="push" id="dYz-tE-yzh"/>
+                                    <action selector="startLogin:" destination="4Ku-qT-dBB" eventType="touchUpInside" id="dmC-ea-1SX"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2q0-QM-CbB">
-                                <rect key="frame" x="20" y="298" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2q0-QM-CbB">
+                                <rect key="frame" x="20" y="297" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j9k-sF-gpn">
+                                <rect key="frame" x="20" y="260" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2q0-QM-CbB" firstAttribute="top" secondItem="DMY-rp-vLK" secondAttribute="bottom" constant="203" id="Jo9-GG-zgX"/>
+                            <constraint firstItem="j9k-sF-gpn" firstAttribute="leading" secondItem="WA2-e3-T5B" secondAttribute="leading" constant="20" id="LKX-pN-X71"/>
+                            <constraint firstAttribute="trailing" secondItem="j9k-sF-gpn" secondAttribute="trailing" constant="20" id="apq-KB-opY"/>
+                            <constraint firstAttribute="trailing" secondItem="2q0-QM-CbB" secondAttribute="trailing" constant="20" id="oj4-vw-geH"/>
+                            <constraint firstItem="j9k-sF-gpn" firstAttribute="top" secondItem="DMY-rp-vLK" secondAttribute="bottom" constant="166" id="wdZ-Pe-tn9"/>
+                            <constraint firstItem="2q0-QM-CbB" firstAttribute="leading" secondItem="WA2-e3-T5B" secondAttribute="leading" constant="20" id="yyf-2i-cUU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" prompt="Masters en Marketing, Comercio y Distribución" id="p4x-2X-HXI"/>
+                    <connections>
+                        <outlet property="password" destination="2q0-QM-CbB" id="am3-Y0-Xsw"/>
+                        <outlet property="username" destination="j9k-sF-gpn" id="plU-T9-u4d"/>
+                        <segue destination="8YX-ce-x5E" kind="push" identifier="loginSegue" id="vCs-XU-bWg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sSb-Jn-UMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
