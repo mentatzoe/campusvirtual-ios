@@ -36,7 +36,7 @@
             </objects>
             <point key="canvasLocation" x="1161" y="-489"/>
         </scene>
-        <!--Alerta Detail Controller-->
+        <!--Alerta Detail Controller - Evento-->
         <scene sceneID="vNW-0L-aYz">
             <objects>
                 <viewController storyboardIdentifier="AlertaDetailController" id="Dj0-U0-P0t" customClass="AlertaDetailController" sceneMemberID="viewController">
@@ -48,19 +48,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="172" translatesAutoresizingMaskIntoConstraints="NO" id="4PN-py-eaQ">
-                                <rect key="frame" x="79" y="139" width="172" height="120"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="4PN-py-eaQ">
+                                <rect key="frame" x="20" y="68" width="280" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripciones y fechas próximamente." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="iWg-fA-WMa">
+                                <rect key="frame" x="20" y="168" width="280" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tipo de Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLL-rl-1od">
+                                <rect key="frame" x="20" y="131" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqh-3v-oHm">
+                                <rect key="frame" x="20" y="423" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4PN-py-eaQ" firstAttribute="top" secondItem="hWp-mp-8fL" secondAttribute="bottom" constant="4" id="2Xs-pz-dxO"/>
+                            <constraint firstItem="KLL-rl-1od" firstAttribute="top" secondItem="4PN-py-eaQ" secondAttribute="bottom" constant="-8" id="Ty4-Lu-TMf"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8m9-Oq-OsX"/>
+                    <navigationItem key="navigationItem" title="Evento" id="8m9-Oq-OsX"/>
                     <connections>
+                        <outlet property="dateOutlet" destination="aqh-3v-oHm" id="GiU-8o-tIm"/>
+                        <outlet property="descOutlet" destination="iWg-fA-WMa" id="V8i-Wy-ZgV"/>
                         <outlet property="labelOutlet" destination="4PN-py-eaQ" id="ThZ-Wz-IgV"/>
+                        <outlet property="typeOutlet" destination="KLL-rl-1od" id="oHy-gG-4Mw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Oi-Hn-NIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

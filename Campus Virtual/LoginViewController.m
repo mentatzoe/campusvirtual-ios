@@ -19,7 +19,7 @@
 
 @end
 
-#define getDataURL @"http://www.pmasters.es/campusvirtualMMCD2012/ios/login.php"
+#define getDataURL @"http://www.pmasters.es/ios/login.php"
 
 @implementation LoginViewController
 

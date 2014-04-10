@@ -10,6 +10,9 @@
 
 @interface AlertaDetailController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *typeOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *descOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *dateOutlet;
 
 @end
 
@@ -28,7 +31,10 @@
 {
     [super viewDidLoad];
     
-    [self.labelOutlet setText:self.stuff];
+    [self.labelOutlet setText:self.alertaDet.name];
+    [self.typeOutlet setText:self.alertaDet.type];
+    [self.descOutlet setText:self.alertaDet.description];
+    [self.dateOutlet setText:[self formatDate]];
 
     // Do any additional setup after loading the view.
 }
@@ -49,6 +55,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSString *) formatDate{
+    NSString *dateString =
+    [NSDateFormatter localizedStringFromDate:self.alertaDet.dueDate
+                    dateStyle:NSDateFormatterShortStyle
+                        timeStyle:NSDateFormatterFullStyle];
+    NSLog(@"%@",dateString);
+    
+    return dateString;
+}
 
 - (IBAction)unwindToDetail:(UIStoryboardSegue *)unwindSegueAlertaDetail
 {

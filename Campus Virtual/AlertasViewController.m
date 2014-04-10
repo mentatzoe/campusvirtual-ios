@@ -17,7 +17,7 @@
 
 @end
 
-#define getDataURL @"http://www.pmasters.es/campusvirtualMMCD2012/ios/getalerts.php"
+#define getDataURL2 @"http://www.pmasters.es/ios/getalerts.php"
 
 @implementation AlertasViewController
 
@@ -59,14 +59,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.alertas count];;
+    return [self.alertas count];
 }
 
 
@@ -132,8 +130,6 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    AlertaDetailController *det = segue.destinationViewController;
-    det.alertaDet = self.selected;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
@@ -146,7 +142,7 @@
             NSString *post =[[NSString alloc] initWithFormat:@"user=%d",self.userID];
             NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:getDataURL];
+            NSURL *url=[NSURL URLWithString:getDataURL2];
             
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
             
@@ -194,7 +190,8 @@
         NSString *name = [j objectForKey:@"name"];
         if( !(name == (id)[NSNull null] || name.length == 0)){
             int unixtime = [[NSNumber numberWithDouble: [[NSDate date] timeIntervalSince1970]] integerValue];
-            Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime];
+            NSDate *dueDate = [NSDate dateWithTimeIntervalSince1970: [[j objectForKey:@"dueDate"] doubleValue]];
+            Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime andDescription:[j objectForKey:@"name"] andDueDate:dueDate];
             [self.alertas addObject: a];
             NSLog(@"Alerta loop: %@", a);
         }

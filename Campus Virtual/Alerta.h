@@ -12,10 +12,19 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSDate *dueDate;
 @property (nonatomic) int timeFetched;
 
 -(id) initWithName: (NSString *) name
            andType: (NSString *) type
            andTime: (int) time;
+
+-(id) initWithName: (NSString *) name
+           andType: (NSString *) type
+           andTime: (int) time
+    andDescription: (NSString *) desc
+        andDueDate: (NSDate *) date;
+
 
 @end
