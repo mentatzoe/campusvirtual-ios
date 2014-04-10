@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>19E983A0-FCBC-4AD1-947C-C18A715D7B9E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Campus Virtual</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E3B351A1-482C-4AAE-A547-FBD4ECFBB85B</key>
+		<string>https://github.com/mentatzoe/campusvirtual-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Campus Virtual.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E3B351A1-482C-4AAE-A547-FBD4ECFBB85B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mentatzoe/campusvirtual-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E3B351A1-482C-4AAE-A547-FBD4ECFBB85B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E3B351A1-482C-4AAE-A547-FBD4ECFBB85B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>campusvirtual-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -148,11 +148,11 @@
             </objects>
             <point key="canvasLocation" x="153" y="255"/>
         </scene>
-        <!--Tab Bar Controller - Campus Virtual-->
+        <!--Custom Tab Bar Controller - Campus Virtual-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Campus Virtual" id="FGD-fh-9Nv"/>
+                <tabBarController id="8YX-ce-x5E" customClass="CustomTabBarController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Campus Virtual" prompt="Masters en Marketing, Comercio y Distribución" id="FGD-fh-9Nv"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
