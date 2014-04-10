@@ -25,6 +25,8 @@
 		4F15754718F62D8400FBB7C5 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15754618F62D8400FBB7C5 /* CustomTabBarController.m */; };
 		4F15754A18F647CA00FBB7C5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15754918F647CA00FBB7C5 /* User.m */; };
 		4F15754D18F64E2C00FBB7C5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15754C18F64E2C00FBB7C5 /* LoginViewController.m */; };
+		4F15755018F6835A00FBB7C5 /* AlertasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15754F18F6835A00FBB7C5 /* AlertasViewController.m */; };
+		4F15755918F698F900FBB7C5 /* Alerta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15755818F698F900FBB7C5 /* Alerta.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		4F15754918F647CA00FBB7C5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		4F15754B18F64E2C00FBB7C5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4F15754C18F64E2C00FBB7C5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4F15754E18F6835A00FBB7C5 /* AlertasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertasViewController.h; sourceTree = "<group>"; };
+		4F15754F18F6835A00FBB7C5 /* AlertasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertasViewController.m; sourceTree = "<group>"; };
+		4F15755718F698F900FBB7C5 /* Alerta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerta.h; sourceTree = "<group>"; };
+		4F15755818F698F900FBB7C5 /* Alerta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerta.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,10 @@
 				4F15754618F62D8400FBB7C5 /* CustomTabBarController.m */,
 				4F15754818F647CA00FBB7C5 /* User.h */,
 				4F15754918F647CA00FBB7C5 /* User.m */,
+				4F15755718F698F900FBB7C5 /* Alerta.h */,
+				4F15755818F698F900FBB7C5 /* Alerta.m */,
+				4F15754E18F6835A00FBB7C5 /* AlertasViewController.h */,
+				4F15754F18F6835A00FBB7C5 /* AlertasViewController.m */,
 			);
 			path = "Campus Virtual";
 			sourceTree = "<group>";
@@ -272,8 +282,10 @@
 				4F15752718F6248600FBB7C5 /* SecondViewController.m in Sources */,
 				4F15751E18F6248600FBB7C5 /* AppDelegate.m in Sources */,
 				4F15754A18F647CA00FBB7C5 /* User.m in Sources */,
+				4F15755918F698F900FBB7C5 /* Alerta.m in Sources */,
 				4F15752418F6248600FBB7C5 /* FirstViewController.m in Sources */,
 				4F15754D18F64E2C00FBB7C5 /* LoginViewController.m in Sources */,
+				4F15755018F6835A00FBB7C5 /* AlertasViewController.m in Sources */,
 				4F15754718F62D8400FBB7C5 /* CustomTabBarController.m in Sources */,
 				4F15751A18F6248600FBB7C5 /* main.m in Sources */,
 			);
