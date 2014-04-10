@@ -23,6 +23,7 @@
 		4F15753A18F6248700FBB7C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F15753818F6248700FBB7C5 /* InfoPlist.strings */; };
 		4F15753C18F6248700FBB7C5 /* Campus_VirtualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15753B18F6248700FBB7C5 /* Campus_VirtualTests.m */; };
 		4F15754718F62D8400FBB7C5 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15754618F62D8400FBB7C5 /* CustomTabBarController.m */; };
+		4F15754A18F647CA00FBB7C5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15754918F647CA00FBB7C5 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		4F15753B18F6248700FBB7C5 /* Campus_VirtualTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Campus_VirtualTests.m; sourceTree = "<group>"; };
 		4F15754518F62D8400FBB7C5 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		4F15754618F62D8400FBB7C5 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
+		4F15754818F647CA00FBB7C5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		4F15754918F647CA00FBB7C5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				4F15751418F6248600FBB7C5 /* Supporting Files */,
 				4F15754518F62D8400FBB7C5 /* CustomTabBarController.h */,
 				4F15754618F62D8400FBB7C5 /* CustomTabBarController.m */,
+				4F15754818F647CA00FBB7C5 /* User.h */,
+				4F15754918F647CA00FBB7C5 /* User.m */,
 			);
 			path = "Campus Virtual";
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			files = (
 				4F15752718F6248600FBB7C5 /* SecondViewController.m in Sources */,
 				4F15751E18F6248600FBB7C5 /* AppDelegate.m in Sources */,
+				4F15754A18F647CA00FBB7C5 /* User.m in Sources */,
 				4F15752418F6248600FBB7C5 /* FirstViewController.m in Sources */,
 				4F15754718F62D8400FBB7C5 /* CustomTabBarController.m in Sources */,
 				4F15751A18F6248600FBB7C5 /* main.m in Sources */,
@@ -468,6 +474,7 @@
 				4F15754118F6248700FBB7C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F15754218F6248700FBB7C5 /* Build configuration list for PBXNativeTarget "Campus VirtualTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +483,7 @@
 				4F15754418F6248700FBB7C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
