@@ -27,6 +27,7 @@
 		4F15754D18F64E2C00FBB7C5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15754C18F64E2C00FBB7C5 /* LoginViewController.m */; };
 		4F15755018F6835A00FBB7C5 /* AlertasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15754F18F6835A00FBB7C5 /* AlertasViewController.m */; };
 		4F15755918F698F900FBB7C5 /* Alerta.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15755818F698F900FBB7C5 /* Alerta.m */; };
+		4F15755F18F6C44000FBB7C5 /* AlertaDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15755E18F6C44000FBB7C5 /* AlertaDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		4F15754F18F6835A00FBB7C5 /* AlertasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertasViewController.m; sourceTree = "<group>"; };
 		4F15755718F698F900FBB7C5 /* Alerta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerta.h; sourceTree = "<group>"; };
 		4F15755818F698F900FBB7C5 /* Alerta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerta.m; sourceTree = "<group>"; };
+		4F15755D18F6C44000FBB7C5 /* AlertaDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertaDetailController.h; sourceTree = "<group>"; };
+		4F15755E18F6C44000FBB7C5 /* AlertaDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertaDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 		4F15751318F6248600FBB7C5 /* Campus Virtual */ = {
 			isa = PBXGroup;
 			children = (
+				4F15755D18F6C44000FBB7C5 /* AlertaDetailController.h */,
+				4F15755E18F6C44000FBB7C5 /* AlertaDetailController.m */,
 				4F15751C18F6248600FBB7C5 /* AppDelegate.h */,
 				4F15751D18F6248600FBB7C5 /* AppDelegate.m */,
 				4F15751F18F6248600FBB7C5 /* Main.storyboard */,
@@ -280,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F15752718F6248600FBB7C5 /* SecondViewController.m in Sources */,
+				4F15755F18F6C44000FBB7C5 /* AlertaDetailController.m in Sources */,
 				4F15751E18F6248600FBB7C5 /* AppDelegate.m in Sources */,
 				4F15754A18F647CA00FBB7C5 /* User.m in Sources */,
 				4F15755918F698F900FBB7C5 /* Alerta.m in Sources */,

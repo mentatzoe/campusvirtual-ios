@@ -7,11 +7,13 @@
 //
 
 #import "AlertasViewController.h"
+#import "AlertaDetailController.h"
 #import "Alerta.h"
 
 @interface AlertasViewController ()
 
 @property (nonatomic, strong) NSMutableArray *alertas;
+@property (nonatomic, weak) Alerta *selected;
 
 @end
 
@@ -124,16 +126,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    AlertaDetailController *det = segue.destinationViewController;
+    det.alertaDet = self.selected;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 #pragma mark - Data
 
@@ -196,6 +200,15 @@
         }
     }
     NSLog(@"Alertas: %@", self.alertas);
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    AlertaDetailController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"AlertaDetailController"];
+    dvc.alertaDet = [self.alertas objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:dvc animated:YES];    // Display Alert Message
+    
 }
 
 @end

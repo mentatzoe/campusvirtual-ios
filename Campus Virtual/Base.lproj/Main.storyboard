@@ -26,8 +26,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="5v1-au-5G2" id="H7d-nw-6ak"/>
-                            <outlet property="delegate" destination="5v1-au-5G2" id="HiN-71-OTo"/>
+                            <outlet property="dataSource" destination="5v1-au-5G2" id="IDY-Pk-5BI"/>
+                            <outlet property="delegate" destination="5v1-au-5G2" id="6BP-zw-XLw"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Alertas" image="alerta" id="Dds-o2-VE7"/>
@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="1161" y="-489"/>
         </scene>
-        <!--View Controller-->
+        <!--Alerta Detail Controller-->
         <scene sceneID="vNW-0L-aYz">
             <objects>
-                <viewController id="Dj0-U0-P0t" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlertaDetailController" id="Dj0-U0-P0t" customClass="AlertaDetailController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hWp-mp-8fL"/>
                         <viewControllerLayoutGuide type="bottom" id="tb2-g5-sjK"/>
@@ -47,9 +47,21 @@
                     <view key="view" contentMode="scaleToFill" id="kkN-rh-WUJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="172" translatesAutoresizingMaskIntoConstraints="NO" id="4PN-py-eaQ">
+                                <rect key="frame" x="79" y="139" width="172" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8m9-Oq-OsX"/>
+                    <connections>
+                        <outlet property="labelOutlet" destination="4PN-py-eaQ" id="ThZ-Wz-IgV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Oi-Hn-NIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
