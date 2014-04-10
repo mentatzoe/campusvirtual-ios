@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (nonatomic) int uid;
 
 - (IBAction)startLogin:(id)sender;
 
@@ -51,6 +52,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    if([segue.identifier isEqualToString:@"loginSegue"]){
+    
+    CustomTabBarController *controller = (CustomTabBarController *) segue.destinationViewController;
+    controller.userID = self.uid;
+    }
 }
 
 - (void) alertStatus:(NSString *)msg :(NSString *)title
@@ -110,6 +117,7 @@
                     NSLog(@"%d",success);
                     if(success == 1)
                     {
+                        self.uid = [(NSNumber *) [(NSDictionary *) self.json objectForKey:@"id"] integerValue];
                         [self performSegueWithIdentifier:@"loginSegue" sender:self];
                         
                     } else {

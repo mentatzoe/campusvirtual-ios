@@ -7,6 +7,7 @@
 //
 
 #import "CustomTabBarController.h"
+#import "AlertasViewController.h"
 
 @interface CustomTabBarController ()
 
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
+    AlertasViewController *a =  [[self viewControllers] objectAtIndex:0];
+    a.userID = self.userID;
     // Do any additional setup after loading the view.
 }
 
@@ -41,15 +44,18 @@
      NSLog(@"I'm working. Kinda");
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+     NSLog(@"prepareForSegue: %@", segue.identifier);
+    AlertasViewController *controller = (AlertasViewController *) segue.destinationViewController;
+    controller.userID = self.userID;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

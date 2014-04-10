@@ -10,4 +10,12 @@
 
 @interface Alerta : NSObject
 
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *type;
+@property (nonatomic) int timeFetched;
+
+-(id) initWithName: (NSString *) name
+           andType: (NSString *) type
+           andTime: (int) time;
+
 @end

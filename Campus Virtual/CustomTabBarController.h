@@ -10,6 +10,8 @@
 
 @interface CustomTabBarController : UITabBarController
 
+@property (nonatomic) int userID;
+
 - (IBAction)unwindToTabs:(UIStoryboardSegue *) unwindSegue;
 
 @end

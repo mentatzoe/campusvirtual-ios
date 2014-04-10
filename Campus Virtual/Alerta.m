@@ -10,4 +10,17 @@
 
 @implementation Alerta
 
+@synthesize name = _name, type = _type, timeFetched = _timeFetched;
+
+-(id) initWithName: (NSString *) name andType: (NSString *) type andTime: (int) time;
+{
+    self = [[Alerta alloc] init];
+    self.name = name;
+    self.type = type;
+    self.timeFetched = time;
+    if (self) {
+    }
+    return self;
+}
+
 @end

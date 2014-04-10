@@ -10,4 +10,9 @@
 
 @interface AlertasViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic) int userID;
+
+@property (nonatomic, strong) NSMutableArray * json;
+
+
 @end
