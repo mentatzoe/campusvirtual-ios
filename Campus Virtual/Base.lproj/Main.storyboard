@@ -55,7 +55,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripciones y fechas próximamente." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="iWg-fA-WMa">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripciones y fechas próximamente." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="iWg-fA-WMa">
                                 <rect key="frame" x="20" y="168" width="280" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -81,7 +81,7 @@
                             <constraint firstItem="KLL-rl-1od" firstAttribute="top" secondItem="4PN-py-eaQ" secondAttribute="bottom" constant="-8" id="Ty4-Lu-TMf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Evento" id="8m9-Oq-OsX"/>
+                    <navigationItem key="navigationItem" title="Evento" prompt="Masters en Marketing, Comercio y Distribución" id="8m9-Oq-OsX"/>
                     <connections>
                         <outlet property="dateOutlet" destination="aqh-3v-oHm" id="GiU-8o-tIm"/>
                         <outlet property="descOutlet" destination="iWg-fA-WMa" id="V8i-Wy-ZgV"/>
@@ -105,14 +105,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="29h-N2-YGT">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Más características" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="29h-N2-YGT">
                                 <rect key="frame" x="20" y="158" width="280" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the second view controller — an instance of SecondViewController — specified in the app delegate." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DcM-Fx-MKR">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="En un futuro, prestad atención!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DcM-Fx-MKR">
                                 <rect key="frame" x="20" y="240" width="280" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="9fN-Zf-E0i"/>
@@ -131,16 +131,16 @@
                             <constraint firstAttribute="centerY" secondItem="DcM-Fx-MKR" secondAttribute="centerY" id="lHZ-e8-ii2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mensajes" image="chat" id="Z7h-1E-pvt"/>
+                    <navigationItem key="navigationItem" title="Más" prompt="Masters en Marketing, Comercio y Distribución" id="1YU-qn-lkH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="194"/>
+            <point key="canvasLocation" x="1693" y="194"/>
         </scene>
-        <!--Collection View Controller - Mediateca-->
+        <!--Mediateca View Controller - Mediateca-->
         <scene sceneID="s5G-L8-xuJ">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="3RG-t9-Cg8" sceneMemberID="viewController">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="3RG-t9-Cg8" customClass="MediatecaViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="DrE-ER-WJF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,7 +254,7 @@
                     <connections>
                         <segue destination="5v1-au-5G2" kind="relationship" relationship="viewControllers" id="Lss-XY-SwI"/>
                         <segue destination="3RG-t9-Cg8" kind="relationship" relationship="viewControllers" id="zze-sH-iqN"/>
-                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
+                        <segue destination="eG6-gO-y97" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -298,10 +298,28 @@
             </objects>
             <point key="canvasLocation" x="1567" y="-489"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GVe-Cd-hMy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eG6-gO-y97" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="Z7h-1E-pvt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T7a-AB-5rw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="rootViewController" id="cY4-F7-3uo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTn-q7-Jb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1167" y="194"/>
+        </scene>
     </scenes>
     <resources>
         <image name="alerta" width="50" height="50"/>
-        <image name="chat" width="50" height="50"/>
         <image name="logo" width="349" height="98"/>
         <image name="mediateca" width="50" height="50"/>
     </resources>

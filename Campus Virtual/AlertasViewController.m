@@ -189,9 +189,14 @@
     for (NSDictionary* j in self.json){
         NSString *name = [j objectForKey:@"name"];
         if( !(name == (id)[NSNull null] || name.length == 0)){
+            
+            NSString *desc= [j objectForKey:@"description"];
+            
             int unixtime = [[NSNumber numberWithDouble: [[NSDate date] timeIntervalSince1970]] integerValue];
             NSDate *dueDate = [NSDate dateWithTimeIntervalSince1970: [[j objectForKey:@"dueDate"] doubleValue]];
-            Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime andDescription:[j objectForKey:@"name"] andDueDate:dueDate];
+            
+            Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime andDescription:desc andDueDate:dueDate];
+            
             [self.alertas addObject: a];
             NSLog(@"Alerta loop: %@", a);
         }

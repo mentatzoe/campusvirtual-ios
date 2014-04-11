@@ -6,6 +6,23 @@
 //  Copyright (c) 2014 Masters en Marketing, Comercio y Distribucion. All rights reserved.
 //
 
+@implementation UILabel (Html)
+
+- (void) setHtml: (NSString*) html
+{
+    NSError *err = nil;
+    self.attributedText =
+    [[NSAttributedString alloc]
+     initWithData: [html dataUsingEncoding:NSUTF32StringEncoding allowLossyConversion:YES]
+     options: @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
+     documentAttributes: nil
+     error: &err];
+    if(err)
+        NSLog(@"Unable to parse label text: %@", err);
+}
+
+@end
+
 #import "AlertaDetailController.h"
 
 @interface AlertaDetailController ()
@@ -31,9 +48,11 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"desc: %@", self.alertaDet.description);
+    
     [self.labelOutlet setText:self.alertaDet.name];
     [self.typeOutlet setText:self.alertaDet.type];
-    [self.descOutlet setText:self.alertaDet.description];
+    [self.descOutlet setHtml:self.alertaDet.description];
     [self.dateOutlet setText:[self formatDate]];
 
     // Do any additional setup after loading the view.
@@ -60,7 +79,7 @@
     NSString *dateString =
     [NSDateFormatter localizedStringFromDate:self.alertaDet.dueDate
                     dateStyle:NSDateFormatterShortStyle
-                        timeStyle:NSDateFormatterFullStyle];
+                        timeStyle:NSDateFormatterShortStyle];
     NSLog(@"%@",dateString);
     
     return dateString;
@@ -73,3 +92,5 @@
 
 
 @end
+
+
