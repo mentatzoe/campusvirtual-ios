@@ -162,16 +162,16 @@
             NSHTTPURLResponse *response = nil;
             NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
             
-            NSLog(@"Response code: %d", [response statusCode]);
+        //    NSLog(@"Response code: %d", [response statusCode]);
             if ([response statusCode] >=200 && [response statusCode] <300)
             {
                 NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
-                NSLog(@"Response ==> %@", responseData);
+              //  NSLog(@"Response ==> %@", responseData);
                 
                 NSData* dataAfter = [responseData dataUsingEncoding:NSUTF8StringEncoding];
                 self.json = [NSJSONSerialization JSONObjectWithData:dataAfter options:kNilOptions error:nil];
                 
-                NSLog(@"JSON content %@", self.json);
+              //  NSLog(@"JSON content %@", self.json);
                 
                /* NSInteger success = [(NSNumber *) [(NSDictionary *)self.json objectForKey:@"success"] integerValue];
                 NSLog(@"%d",success);ç*/
@@ -198,10 +198,10 @@
             Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime andDescription:desc andDueDate:dueDate];
             
             [self.alertas addObject: a];
-            NSLog(@"Alerta loop: %@", a);
+     //       NSLog(@"Alerta loop: %@", a);
         }
     }
-    NSLog(@"Alertas: %@", self.alertas);
+   // NSLog(@"Alertas: %@", self.alertas);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
