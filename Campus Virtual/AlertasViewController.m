@@ -9,6 +9,7 @@
 #import "AlertasViewController.h"
 #import "AlertaDetailController.h"
 #import "Alerta.h"
+#import "EventTableViewCell.h"
 
 @interface AlertasViewController ()
 
@@ -70,17 +71,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableCell";
+    static NSString *simpleTableIdentifier = @"EventTableViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    EventTableViewCell *cell = (EventTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EventTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
     Alerta *a = [self.alertas objectAtIndex:indexPath.row];
-    cell.textLabel.text = a.name;
-    cell.imageView.image = [UIImage imageNamed:a.type];
+    cell.name.text = a.name;
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:a.dueDate
+                                                        dateStyle:NSDateFormatterShortStyle
+                                                          timeStyle:NSDateFormatterShortStyle];
+    cell.date.text = dateString;
+    cell.typeThumb.image = [UIImage imageNamed:a.type];
     cell.detailTextLabel.text = @"Aquí info extra: Tiempo restante o similares";
     return cell;
 }
@@ -166,7 +172,7 @@
             if ([response statusCode] >=200 && [response statusCode] <300)
             {
                 NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
-              //  NSLog(@"Response ==> %@", responseData);
+                NSLog(@"Response ==> %@", responseData);
                 
                 NSData* dataAfter = [responseData dataUsingEncoding:NSUTF8StringEncoding];
                 self.json = [NSJSONSerialization JSONObjectWithData:dataAfter options:kNilOptions error:nil];
@@ -198,10 +204,10 @@
             Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime andDescription:desc andDueDate:dueDate];
             
             [self.alertas addObject: a];
-     //       NSLog(@"Alerta loop: %@", a);
+            NSLog(@"Alerta loop: %@", a);
         }
     }
-   // NSLog(@"Alertas: %@", self.alertas);
+    NSLog(@"Alertas: %@", self.alertas);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -211,6 +217,11 @@
     dvc.alertaDet = [self.alertas objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:dvc animated:YES];    // Display Alert Message
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 @end

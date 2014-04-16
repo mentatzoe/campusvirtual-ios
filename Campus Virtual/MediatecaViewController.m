@@ -92,7 +92,7 @@
             NSData* dataAfter = [responseData dataUsingEncoding:NSUTF8StringEncoding];
             self.json = [NSJSONSerialization JSONObjectWithData:dataAfter options:kNilOptions error:nil];
             
-            NSLog(@"MEDIATECA JSON content %@", self.json);
+            //NSLog(@"MEDIATECA JSON content %@", self.json);
         }
         
     }

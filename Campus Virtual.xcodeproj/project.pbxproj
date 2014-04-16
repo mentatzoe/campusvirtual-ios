@@ -30,6 +30,8 @@
 		4F15755F18F6C44000FBB7C5 /* AlertaDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15755E18F6C44000FBB7C5 /* AlertaDetailController.m */; };
 		4F8191A918F8739900803315 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8191A818F8739900803315 /* Video.m */; };
 		4F8191AF18F87B0D00803315 /* MediatecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8191AE18F87B0D00803315 /* MediatecaViewController.m */; };
+		4FA2051918FE01AF007F09B5 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA2051818FE01AF007F09B5 /* EventTableViewCell.xib */; };
+		4FA2051C18FE033F007F09B5 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2051B18FE033F007F09B5 /* EventTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,9 @@
 		4F8191A818F8739900803315 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		4F8191AD18F87B0D00803315 /* MediatecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediatecaViewController.h; sourceTree = "<group>"; };
 		4F8191AE18F87B0D00803315 /* MediatecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediatecaViewController.m; sourceTree = "<group>"; };
+		4FA2051818FE01AF007F09B5 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		4FA2051A18FE033F007F09B5 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		4FA2051B18FE033F007F09B5 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +169,9 @@
 				4F15755818F698F900FBB7C5 /* Alerta.m */,
 				4F15754E18F6835A00FBB7C5 /* AlertasViewController.h */,
 				4F15754F18F6835A00FBB7C5 /* AlertasViewController.m */,
+				4FA2051818FE01AF007F09B5 /* EventTableViewCell.xib */,
+				4FA2051A18FE033F007F09B5 /* EventTableViewCell.h */,
+				4FA2051B18FE033F007F09B5 /* EventTableViewCell.m */,
 			);
 			path = "Campus Virtual";
 			sourceTree = "<group>";
@@ -274,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F15752918F6248700FBB7C5 /* Images.xcassets in Resources */,
+				4FA2051918FE01AF007F09B5 /* EventTableViewCell.xib in Resources */,
 				4F15751818F6248600FBB7C5 /* InfoPlist.strings in Resources */,
 				4F15752118F6248600FBB7C5 /* Main.storyboard in Resources */,
 			);
@@ -296,6 +305,7 @@
 			files = (
 				4F15752718F6248600FBB7C5 /* SecondViewController.m in Sources */,
 				4F15755F18F6C44000FBB7C5 /* AlertaDetailController.m in Sources */,
+				4FA2051C18FE033F007F09B5 /* EventTableViewCell.m in Sources */,
 				4F15751E18F6248600FBB7C5 /* AppDelegate.m in Sources */,
 				4F15754A18F647CA00FBB7C5 /* User.m in Sources */,
 				4F8191AF18F87B0D00803315 /* MediatecaViewController.m in Sources */,
