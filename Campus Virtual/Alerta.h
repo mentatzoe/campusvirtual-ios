@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSDate *dueDate;
 @property (nonatomic) int timeFetched;
+@property (nonatomic,strong) NSString *coursename;
 
 -(id) initWithName: (NSString *) name
            andType: (NSString *) type
@@ -25,6 +26,13 @@
            andTime: (int) time
     andDescription: (NSString *) desc
         andDueDate: (NSDate *) date;
+
+-(id) initWithName: (NSString *) name
+           andType: (NSString *) type
+           andTime: (int) time
+    andDescription: (NSString *) desc
+        andDueDate: (NSDate *) date
+     andCourseName: (NSString *) cname;
 
 
 @end

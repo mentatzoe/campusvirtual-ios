@@ -10,7 +10,7 @@
 
 @implementation Alerta
 
-@synthesize name = _name, type = _type, timeFetched = _timeFetched, description = _description, dueDate = _dueDate;
+@synthesize name = _name, type = _type, timeFetched = _timeFetched, description = _description, dueDate = _dueDate, coursename = _coursename;
 
 -(id) initWithName: (NSString *) name andType: (NSString *) type andTime: (int) time;
 {
@@ -40,5 +40,25 @@
     }
     return self;
 }
+
+-(id) initWithName: (NSString *) name
+           andType: (NSString *) type
+           andTime: (int) time
+    andDescription: (NSString *) desc
+        andDueDate: (NSDate *) date
+     andCourseName:(NSString *)cname
+{
+    self = [[Alerta alloc] init];
+    self.name = name;
+    self.type = type;
+    self.timeFetched = time;
+    self.description = desc;
+    self.dueDate = date;
+    self.coursename = cname;
+    if (self) {
+    }
+    return self;
+}
+
 
 @end

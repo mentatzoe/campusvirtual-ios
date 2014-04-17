@@ -27,6 +27,7 @@
 
 @interface AlertaDetailController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelOutlet;
+@property (weak, nonatomic) IBOutlet UIImageView *imageOutlet;
 @property (weak, nonatomic) IBOutlet UILabel *typeOutlet;
 @property (weak, nonatomic) IBOutlet UILabel *descOutlet;
 @property (weak, nonatomic) IBOutlet UILabel *dateOutlet;
@@ -50,10 +51,16 @@
     
     NSLog(@"desc: %@", self.alertaDet.description);
     
+    
+    NSString *big = @"-big";
+    
+    NSString *whole = [self.alertaDet.type stringByAppendingString:big];
+    
     [self.labelOutlet setText:self.alertaDet.name];
-    [self.typeOutlet setText:self.alertaDet.type];
+    [self.typeOutlet setText:self.alertaDet.coursename];
     [self.descOutlet setHtml:self.alertaDet.description];
     [self.dateOutlet setText:[self formatDate]];
+    [self.imageOutlet setImage:[UIImage imageNamed:whole]];
 
     // Do any additional setup after loading the view.
 }

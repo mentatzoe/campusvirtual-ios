@@ -43,6 +43,8 @@
     NSLog(@"User view ID %d", self.userID);
     [self getData];
     [self parseJSON];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dueDate" ascending:TRUE];
+    [self.alertas sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -86,6 +88,7 @@
                                                         dateStyle:NSDateFormatterShortStyle
                                                           timeStyle:NSDateFormatterShortStyle];
     cell.date.text = dateString;
+    cell.course.text = a.coursename;
     cell.typeThumb.image = [UIImage imageNamed:a.type];
     cell.detailTextLabel.text = @"Aquí info extra: Tiempo restante o similares";
     return cell;
@@ -201,7 +204,7 @@
             int unixtime = [[NSNumber numberWithDouble: [[NSDate date] timeIntervalSince1970]] integerValue];
             NSDate *dueDate = [NSDate dateWithTimeIntervalSince1970: [[j objectForKey:@"dueDate"] doubleValue]];
             
-            Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime andDescription:desc andDueDate:dueDate];
+            Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime andDescription:desc andDueDate:dueDate andCourseName:[j objectForKey:@"course_name"]];
             
             [self.alertas addObject: a];
             NSLog(@"Alerta loop: %@", a);
