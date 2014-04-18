@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MediatecaViewController : UICollectionViewController
+@interface MediatecaViewController : UITableViewController
 
 @end

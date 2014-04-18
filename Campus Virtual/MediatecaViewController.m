@@ -8,6 +8,7 @@
 
 #import "MediatecaViewController.h"
 #import "Video.h"
+#import "MediatecaTableViewCell.h"
 
 @interface MediatecaViewController ()
 
@@ -56,12 +57,54 @@
 }
 */
 
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.videos count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"MediatecaTableViewCell";
+    
+    MediatecaTableViewCell *cell = (MediatecaTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MediatecaTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    Video *a = [self.videos objectAtIndex:indexPath.row];
+    cell.titulo.text = a.titulo;
+    
+    cell.descripcion.text = a.descripcion;
+    
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:a.fecha dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
+    cell.fecha.text = dateString;
+    cell.imagen.image= [UIImage imageNamed:a.tipo];
+    if (cell.imagen.image == nil)
+        NSLog(@"signature image with index:is nil");
+    else
+        NSLog(@"It Worked");
+
+    NSLog(@"%@", a.tipo);
+    cell.detailTextLabel.text = @"Aquí info extra: Tiempo restante o similares";
+    return cell;
+}
+
 #pragma mark - Data
 
 - (void)getData {
     @try {
         NSString *post =[[NSString alloc] initWithFormat:@""];
-        NSLog(@"PostData: %@",post);
+        //NSLog(@"PostData: %@",post);
         
         NSURL *url=[NSURL URLWithString:getDataURLVideos];
         
@@ -83,11 +126,11 @@
         NSHTTPURLResponse *response = nil;
         NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         
-        NSLog(@"Response code: %d", [response statusCode]);
+        //NSLog(@"Response code: %d", [response statusCode]);
         if ([response statusCode] >=200 && [response statusCode] <300)
         {
             NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
-            NSLog(@"Response ==> %@", responseData);
+            //NSLog(@"Response ==> %@", responseData);
             
             NSData* dataAfter = [responseData dataUsingEncoding:NSUTF8StringEncoding];
             self.json = [NSJSONSerialization JSONObjectWithData:dataAfter options:kNilOptions error:nil];
@@ -108,17 +151,21 @@
         NSString *name = [j objectForKey:@"titulo"];
         if( !(name == (id)[NSNull null] || name.length == 0)){
             
-            NSDate *fecha = [NSDate dateWithTimeIntervalSince1970: [[j objectForKey:@"fecha"] doubleValue]];
+            NSDate *fecha = [j objectForKey:@"fecha"];
             
-            Video *v = [[Video alloc] initWithTitulo:[j objectForKey:@"titulo"] andDesc:[j objectForKey:@"descripcion"] andFecha:fecha andTipo: 1];
+            Video *v = [[Video alloc] initWithTitulo:[j objectForKey:@"titulo"] andDesc:[j objectForKey:@"descripcion"] andFecha:fecha andTipo: [j objectForKey:@"tipo"]];
             
-            NSLog(@"Contenido partes %@", [j objectForKey:@"partes"]);
+            //NSLog(@"Contenido partes %@", [j objectForKey:@"partes"]);
             
             [self.videos addObject: v];
-            NSLog(@"Video loop: %@", v);
+            //NSLog(@"Video loop: %@", v);
         }
     }
-    NSLog(@"Videos: %@", self.videos);
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 @end

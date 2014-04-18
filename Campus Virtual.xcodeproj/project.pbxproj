@@ -32,6 +32,8 @@
 		4F8191AF18F87B0D00803315 /* MediatecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8191AE18F87B0D00803315 /* MediatecaViewController.m */; };
 		4FA2051918FE01AF007F09B5 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA2051818FE01AF007F09B5 /* EventTableViewCell.xib */; };
 		4FA2051C18FE033F007F09B5 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2051B18FE033F007F09B5 /* EventTableViewCell.m */; };
+		4FDC5F9A19019D3A00B12A69 /* MediatecaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC5F9919019D3A00B12A69 /* MediatecaTableViewCell.xib */; };
+		4FDC5F9D19019F4D00B12A69 /* MediatecaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC5F9C19019F4D00B12A69 /* MediatecaTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,9 @@
 		4FA2051818FE01AF007F09B5 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		4FA2051A18FE033F007F09B5 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
 		4FA2051B18FE033F007F09B5 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		4FDC5F9919019D3A00B12A69 /* MediatecaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediatecaTableViewCell.xib; sourceTree = "<group>"; };
+		4FDC5F9B19019F4D00B12A69 /* MediatecaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediatecaTableViewCell.h; sourceTree = "<group>"; };
+		4FDC5F9C19019F4D00B12A69 /* MediatecaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediatecaTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +174,9 @@
 				4F15755818F698F900FBB7C5 /* Alerta.m */,
 				4F15754E18F6835A00FBB7C5 /* AlertasViewController.h */,
 				4F15754F18F6835A00FBB7C5 /* AlertasViewController.m */,
+				4FDC5F9919019D3A00B12A69 /* MediatecaTableViewCell.xib */,
+				4FDC5F9B19019F4D00B12A69 /* MediatecaTableViewCell.h */,
+				4FDC5F9C19019F4D00B12A69 /* MediatecaTableViewCell.m */,
 				4FA2051818FE01AF007F09B5 /* EventTableViewCell.xib */,
 				4FA2051A18FE033F007F09B5 /* EventTableViewCell.h */,
 				4FA2051B18FE033F007F09B5 /* EventTableViewCell.m */,
@@ -283,6 +291,7 @@
 			files = (
 				4F15752918F6248700FBB7C5 /* Images.xcassets in Resources */,
 				4FA2051918FE01AF007F09B5 /* EventTableViewCell.xib in Resources */,
+				4FDC5F9A19019D3A00B12A69 /* MediatecaTableViewCell.xib in Resources */,
 				4F15751818F6248600FBB7C5 /* InfoPlist.strings in Resources */,
 				4F15752118F6248600FBB7C5 /* Main.storyboard in Resources */,
 			);
@@ -312,6 +321,7 @@
 				4F15755918F698F900FBB7C5 /* Alerta.m in Sources */,
 				4F15752418F6248600FBB7C5 /* FirstViewController.m in Sources */,
 				4F15754D18F64E2C00FBB7C5 /* LoginViewController.m in Sources */,
+				4FDC5F9D19019F4D00B12A69 /* MediatecaTableViewCell.m in Sources */,
 				4F15755018F6835A00FBB7C5 /* AlertasViewController.m in Sources */,
 				4F8191A918F8739900803315 /* Video.m in Sources */,
 				4F15754718F62D8400FBB7C5 /* CustomTabBarController.m in Sources */,

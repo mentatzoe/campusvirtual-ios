@@ -13,9 +13,9 @@
     @property (nonatomic, strong) NSString *descripcion;
     @property (nonatomic, strong) NSDate *fecha;
     @property (nonatomic, strong) NSMutableArray *partes;
-    @property (nonatomic) int tipo;
+    @property (nonatomic, strong) NSString *tipo;
 
--(id) initWithTitulo: (NSString *) tit andDesc: (NSString *) desc andFecha: (NSDate *) fe andTipo: (int) t;
+-(id) initWithTitulo: (NSString *) tit andDesc: (NSString *) desc andFecha: (NSDate *) fe andTipo: (NSString *) t;
 -(void) addParte: (NSString *) parte;
 
 @end

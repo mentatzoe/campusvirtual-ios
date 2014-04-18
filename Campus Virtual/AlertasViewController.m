@@ -175,7 +175,7 @@
             if ([response statusCode] >=200 && [response statusCode] <300)
             {
                 NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
-                NSLog(@"Response ==> %@", responseData);
+                //NSLog(@"Response ==> %@", responseData);
                 
                 NSData* dataAfter = [responseData dataUsingEncoding:NSUTF8StringEncoding];
                 self.json = [NSJSONSerialization JSONObjectWithData:dataAfter options:kNilOptions error:nil];
@@ -207,10 +207,10 @@
             Alerta* a = [[Alerta alloc] initWithName:[j objectForKey:@"name"] andType:[j objectForKey:@"type"] andTime: unixtime andDescription:desc andDueDate:dueDate andCourseName:[j objectForKey:@"course_name"]];
             
             [self.alertas addObject: a];
-            NSLog(@"Alerta loop: %@", a);
+           // NSLog(@"Alerta loop: %@", a);
         }
     }
-    NSLog(@"Alertas: %@", self.alertas);
+   // NSLog(@"Alertas: %@", self.alertas);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -12,7 +12,7 @@
 
 @synthesize titulo = _titulo, descripcion = _descripcion, fecha = _fecha, partes = _partes, tipo = _tipo;
 
--(id) initWithTitulo: (NSString *) tit andDesc: (NSString *) desc andFecha: (NSDate *) fe andTipo:(int)t
+-(id) initWithTitulo: (NSString *) tit andDesc: (NSString *) desc andFecha: (NSDate *) fe andTipo:(NSString *)t
 {
     self = [[Video alloc] init];
     self.titulo = tit;
