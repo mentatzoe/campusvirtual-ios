@@ -16,7 +16,6 @@
 		4F15752118F6248600FBB7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F15751F18F6248600FBB7C5 /* Main.storyboard */; };
 		4F15752418F6248600FBB7C5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15752318F6248600FBB7C5 /* FirstViewController.m */; };
 		4F15752718F6248600FBB7C5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15752618F6248600FBB7C5 /* SecondViewController.m */; };
-		4F15752918F6248700FBB7C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F15752818F6248700FBB7C5 /* Images.xcassets */; };
 		4F15753018F6248700FBB7C5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F15752F18F6248700FBB7C5 /* XCTest.framework */; };
 		4F15753118F6248700FBB7C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F15750D18F6248600FBB7C5 /* Foundation.framework */; };
 		4F15753218F6248700FBB7C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F15751118F6248600FBB7C5 /* UIKit.framework */; };
@@ -30,6 +29,9 @@
 		4F15755F18F6C44000FBB7C5 /* AlertaDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F15755E18F6C44000FBB7C5 /* AlertaDetailController.m */; };
 		4F8191A918F8739900803315 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8191A818F8739900803315 /* Video.m */; };
 		4F8191AF18F87B0D00803315 /* MediatecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8191AE18F87B0D00803315 /* MediatecaViewController.m */; };
+		4F9D7C2B1901A80900C6691F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D7C2A1901A80900C6691F /* Images.xcassets */; };
+		4F9D7C2E1901AD7100C6691F /* VideoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D7C2D1901AD7100C6691F /* VideoDetailController.m */; };
+		4F9D7C301901AEF800C6691F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9D7C2F1901AEF800C6691F /* MediaPlayer.framework */; };
 		4FA2051918FE01AF007F09B5 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA2051818FE01AF007F09B5 /* EventTableViewCell.xib */; };
 		4FA2051C18FE033F007F09B5 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2051B18FE033F007F09B5 /* EventTableViewCell.m */; };
 		4FDC5F9A19019D3A00B12A69 /* MediatecaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC5F9919019D3A00B12A69 /* MediatecaTableViewCell.xib */; };
@@ -62,7 +64,6 @@
 		4F15752318F6248600FBB7C5 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		4F15752518F6248600FBB7C5 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		4F15752618F6248600FBB7C5 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		4F15752818F6248700FBB7C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F15752E18F6248700FBB7C5 /* Campus VirtualTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Campus VirtualTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F15752F18F6248700FBB7C5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4F15753718F6248700FBB7C5 /* Campus VirtualTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Campus VirtualTests-Info.plist"; sourceTree = "<group>"; };
@@ -84,6 +85,10 @@
 		4F8191A818F8739900803315 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		4F8191AD18F87B0D00803315 /* MediatecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediatecaViewController.h; sourceTree = "<group>"; };
 		4F8191AE18F87B0D00803315 /* MediatecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediatecaViewController.m; sourceTree = "<group>"; };
+		4F9D7C2A1901A80900C6691F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4F9D7C2C1901AD7100C6691F /* VideoDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailController.h; sourceTree = "<group>"; };
+		4F9D7C2D1901AD7100C6691F /* VideoDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailController.m; sourceTree = "<group>"; };
+		4F9D7C2F1901AEF800C6691F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		4FA2051818FE01AF007F09B5 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		4FA2051A18FE033F007F09B5 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
 		4FA2051B18FE033F007F09B5 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9D7C301901AEF800C6691F /* MediaPlayer.framework in Frameworks */,
 				4F15751018F6248600FBB7C5 /* CoreGraphics.framework in Frameworks */,
 				4F15751218F6248600FBB7C5 /* UIKit.framework in Frameworks */,
 				4F15750E18F6248600FBB7C5 /* Foundation.framework in Frameworks */,
@@ -138,6 +144,7 @@
 		4F15750C18F6248600FBB7C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F9D7C2F1901AEF800C6691F /* MediaPlayer.framework */,
 				4F15750D18F6248600FBB7C5 /* Foundation.framework */,
 				4F15750F18F6248600FBB7C5 /* CoreGraphics.framework */,
 				4F15751118F6248600FBB7C5 /* UIKit.framework */,
@@ -149,6 +156,7 @@
 		4F15751318F6248600FBB7C5 /* Campus Virtual */ = {
 			isa = PBXGroup;
 			children = (
+				4F9D7C2A1901A80900C6691F /* Images.xcassets */,
 				4F15755D18F6C44000FBB7C5 /* AlertaDetailController.h */,
 				4F15755E18F6C44000FBB7C5 /* AlertaDetailController.m */,
 				4F15751C18F6248600FBB7C5 /* AppDelegate.h */,
@@ -156,6 +164,8 @@
 				4F15751F18F6248600FBB7C5 /* Main.storyboard */,
 				4F15754B18F64E2C00FBB7C5 /* LoginViewController.h */,
 				4F15754C18F64E2C00FBB7C5 /* LoginViewController.m */,
+				4F9D7C2C1901AD7100C6691F /* VideoDetailController.h */,
+				4F9D7C2D1901AD7100C6691F /* VideoDetailController.m */,
 				4F15752218F6248600FBB7C5 /* FirstViewController.h */,
 				4F8191AD18F87B0D00803315 /* MediatecaViewController.h */,
 				4F8191AE18F87B0D00803315 /* MediatecaViewController.m */,
@@ -164,7 +174,6 @@
 				4F8191A818F8739900803315 /* Video.m */,
 				4F15752518F6248600FBB7C5 /* SecondViewController.h */,
 				4F15752618F6248600FBB7C5 /* SecondViewController.m */,
-				4F15752818F6248700FBB7C5 /* Images.xcassets */,
 				4F15751418F6248600FBB7C5 /* Supporting Files */,
 				4F15754518F62D8400FBB7C5 /* CustomTabBarController.h */,
 				4F15754618F62D8400FBB7C5 /* CustomTabBarController.m */,
@@ -289,8 +298,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F15752918F6248700FBB7C5 /* Images.xcassets in Resources */,
 				4FA2051918FE01AF007F09B5 /* EventTableViewCell.xib in Resources */,
+				4F9D7C2B1901A80900C6691F /* Images.xcassets in Resources */,
 				4FDC5F9A19019D3A00B12A69 /* MediatecaTableViewCell.xib in Resources */,
 				4F15751818F6248600FBB7C5 /* InfoPlist.strings in Resources */,
 				4F15752118F6248600FBB7C5 /* Main.storyboard in Resources */,
@@ -316,6 +325,7 @@
 				4F15755F18F6C44000FBB7C5 /* AlertaDetailController.m in Sources */,
 				4FA2051C18FE033F007F09B5 /* EventTableViewCell.m in Sources */,
 				4F15751E18F6248600FBB7C5 /* AppDelegate.m in Sources */,
+				4F9D7C2E1901AD7100C6691F /* VideoDetailController.m in Sources */,
 				4F15754A18F647CA00FBB7C5 /* User.m in Sources */,
 				4F8191AF18F87B0D00803315 /* MediatecaViewController.m in Sources */,
 				4F15755918F698F900FBB7C5 /* Alerta.m in Sources */,

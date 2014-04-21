@@ -9,6 +9,7 @@
 #import "MediatecaViewController.h"
 #import "Video.h"
 #import "MediatecaTableViewCell.h"
+#import "VideoDetailController.h"
 
 @interface MediatecaViewController ()
 
@@ -46,7 +47,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -55,7 +56,19 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+ 
+ - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+     NSLog(@"%@", self.storyboard);
+ 
+VideoDetailController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoDetailController"];
+     Video *v = [self.videos objectAtIndex:indexPath.row];
+     NSLog(@"%@", v.partes);
+ dvc.video = [self.videos objectAtIndex:indexPath.row];
+ [self.navigationController pushViewController:dvc animated:YES]; 
+ 
+ }
+
 
 #pragma mark - Table view data source
 
@@ -85,16 +98,13 @@
     cell.titulo.text = a.titulo;
     
     cell.descripcion.text = a.descripcion;
+    if (!(cell.descripcion.text && cell.descripcion.text.length)){
+        cell.descripcion.text = a.tipo;
+    }
     
-    NSString *dateString = [NSDateFormatter localizedStringFromDate:a.fecha dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
-    cell.fecha.text = dateString;
-    cell.imagen.image= [UIImage imageNamed:a.tipo];
-    if (cell.imagen.image == nil)
-        NSLog(@"signature image with index:is nil");
-    else
-        NSLog(@"It Worked");
-
-    NSLog(@"%@", a.tipo);
+   // NSString *dateString = [NSDateFormatter localizedStringFromDate:a.fecha dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
+    cell.fecha.text = a.fecha;
+    cell.imagenThumb.image = [UIImage imageNamed:a.tipo];
     cell.detailTextLabel.text = @"Aquí info extra: Tiempo restante o similares";
     return cell;
 }
@@ -151,12 +161,14 @@
         NSString *name = [j objectForKey:@"titulo"];
         if( !(name == (id)[NSNull null] || name.length == 0)){
             
-            NSDate *fecha = [j objectForKey:@"fecha"];
+           // NSDate *fecha = [j objectForKey:@"fecha"];
             
-            Video *v = [[Video alloc] initWithTitulo:[j objectForKey:@"titulo"] andDesc:[j objectForKey:@"descripcion"] andFecha:fecha andTipo: [j objectForKey:@"tipo"]];
+           // NSLog(@"%@", [j objectForKey:@"fecha"]);
+            
+            Video *v = [[Video alloc] initWithTitulo:[j objectForKey:@"titulo"] andDesc:[j objectForKey:@"descripcion"] andFecha:[j objectForKey:@"fecha"] andTipo: [j objectForKey:@"tipo"]];
             
             //NSLog(@"Contenido partes %@", [j objectForKey:@"partes"]);
-            
+            v.partes = [j objectForKey:@"partes"];
             [self.videos addObject: v];
             //NSLog(@"Video loop: %@", v);
         }
@@ -167,5 +179,8 @@
 {
     return 100;
 }
+
+
+
 
 @end

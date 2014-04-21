@@ -11,11 +11,12 @@
 @interface Video : NSObject
     @property (nonatomic, strong) NSString *titulo;
     @property (nonatomic, strong) NSString *descripcion;
-    @property (nonatomic, strong) NSDate *fecha;
+    @property (nonatomic, strong) NSString *fecha;
     @property (nonatomic, strong) NSMutableArray *partes;
     @property (nonatomic, strong) NSString *tipo;
+    @property (nonatomic, strong) NSMutableArray *listaPartes;
 
--(id) initWithTitulo: (NSString *) tit andDesc: (NSString *) desc andFecha: (NSDate *) fe andTipo: (NSString *) t;
+-(id) initWithTitulo: (NSString *) tit andDesc: (NSString *) desc andFecha: (NSString *) fe andTipo: (NSString *) t;
 -(void) addParte: (NSString *) parte;
 
 @end

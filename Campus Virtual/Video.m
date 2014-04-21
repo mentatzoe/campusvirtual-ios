@@ -10,9 +10,9 @@
 
 @implementation Video
 
-@synthesize titulo = _titulo, descripcion = _descripcion, fecha = _fecha, partes = _partes, tipo = _tipo;
+@synthesize titulo = _titulo, descripcion = _descripcion, fecha = _fecha, partes = _partes, tipo = _tipo, listaPartes = _listaPartes;
 
--(id) initWithTitulo: (NSString *) tit andDesc: (NSString *) desc andFecha: (NSDate *) fe andTipo:(NSString *)t
+-(id) initWithTitulo: (NSString *) tit andDesc: (NSString *) desc andFecha: (NSString *) fe andTipo:(NSString *)t
 {
     self = [[Video alloc] init];
     self.titulo = tit;
@@ -25,7 +25,15 @@
 
 -(void) addParte: (NSString *) parte
 {
-    [self.partes addObject:parte];
+    //[self.partes addObject:parte];
+}
+
+-(void) setPartes:(NSMutableArray *)p{
+    _partes = p;
+    _listaPartes = [[NSMutableArray alloc]init];
+    for (NSMutableDictionary* p in _partes){
+        [_listaPartes addObject:(NSString *)[p objectForKey:@"numero"]];
+    }
 }
 
 @end
